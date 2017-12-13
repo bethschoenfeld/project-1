@@ -1,14 +1,22 @@
 $(document).ready(function () {
     console.log("ready!");
 
-    const words = ['peony'];
+    const words = 'peony';
     console.log(words)
+    const answerSplit = words.split(``)
+    console.log(answerSplit)
 
     $(`.answer`).append(words)
 
-    function answerWord() {
-        for (i = 0; words.length < i; i++) {
+    $(`.letters`).click(function (event) {
+        const clickedLetter = event.target.textContent
+        console.log(clickedLetter)
+        console.log(answerSplit.indexOf(clickedLetter))
+    })
+    
 
-        }
-    };
+    //function answerWord() {
+    // for (i = 0; words.length < i; i++) {
+    //}
+    //};
 });
