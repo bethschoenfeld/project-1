@@ -12,11 +12,13 @@ $(document).ready(function () {
         const clickedLetter = event.target.textContent
         console.log(clickedLetter)
         console.log(answerSplit.indexOf(clickedLetter))
+        if (answerSplit.indexOf(clickedLetter) === 0 ) {
+
+        }
+        else (answerSplit.indexOf(clickedLetter) === -1) {
+
+        }
     })
     
 
-    //function answerWord() {
-    // for (i = 0; words.length < i; i++) {
-    //}
-    //};
 });
