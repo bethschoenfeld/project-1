@@ -11,7 +11,6 @@ $(document).ready(function () {
     $(`.letters`).click(function (event) {
         const clickedLetter = event.target.textContent
         console.log(clickedLetter)
-        //console.log(answerSplit.indexOf(clickedLetter))
         if (answerSplit.indexOf(clickedLetter) >= 0 ) {
             $(event.target).css('color','gray')    
         }
