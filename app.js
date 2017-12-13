@@ -13,11 +13,11 @@ $(document).ready(function () {
         console.log(clickedLetter)
         console.log(answerSplit.indexOf(clickedLetter))
         if (answerSplit.indexOf(clickedLetter) === 0 ) {
-
+            $(event.target).css('color','gray')    
         }
         else (answerSplit.indexOf(clickedLetter) === -1) {
-
-        }
+            $(event.target).css('color', 'red')
+        };
     })
     
 
