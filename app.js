@@ -1,12 +1,16 @@
-$( document ).ready(function() {
-    console.log( "ready!" );
-    
-var words = ['peony', 'sunflower'];
+$(document).ready(function () {
+    console.log("ready!");
 
-function answerWord () {
-    for (i = 0, len = words.length, text = ""; i < len; i++) {
-        text += words[i] + "<br>";
+    $(`.letters`).children()
+
+    let words = ['peony', 'sunflower'];
+    let text = "";
+    let i;
+
+    function answerWord() {
+        for (i = 0, len = words.length, text = ""; i < len; i++) {
+            text += words[i] + "<br>";
+        }
     }
-}
 
 });
