@@ -1,19 +1,25 @@
-.gameboard-container {
-    background-color: white;
-}
-
 .name {
     font-size: 64px;
     font-family: 'Merriweather', sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 .letters {
     font-size: 48px;
     font-family: 'Raleway', sans-serif;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 20px 20px 20px 20px; 
+    grid-column-gap: 25px;
+    grid-row-gap: 35px;
+    
 }
 
 .answer {
     font-size: 48px;
     font-family: 'Raleway', sans-serif;
     color: white;
+    display: grid;
+    align-items: right;
 } 

@@ -1,7 +1,7 @@
 $(document).ready(function () {
     console.log("ready!");
 
-    const words = 'sunflower';
+    const words = 'SUNFLOWER';
     console.log(words)
     const answerSplit = words.split(``)
     console.log(answerSplit)
@@ -13,13 +13,11 @@ $(document).ready(function () {
         console.log(clickedLetter)
         if (answerSplit.indexOf(clickedLetter) >= 0) {
             $(event.target).css('color', 'gray')
+            $(event.target).off() 
         }
         else {
             $(event.target).css('color', 'red')
+            $(event.target).off() 
         };
     })
-
-    //When correct letter is clicked change color to black. 
-
-
 });
