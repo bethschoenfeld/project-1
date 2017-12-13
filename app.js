@@ -12,10 +12,10 @@ $(document).ready(function () {
         const clickedLetter = event.target.textContent
         console.log(clickedLetter)
         //console.log(answerSplit.indexOf(clickedLetter))
-        if (answerSplit.indexOf(clickedLetter) <= 0 ) {
+        if (answerSplit.indexOf(clickedLetter) >= 0 ) {
             $(event.target).css('color','gray')    
         }
-        else if (answerSplit.indexOf(clickedLetter) === -1) {
+        else {
            $(event.target).css('color', 'red')
        };
     })
