@@ -11,13 +11,13 @@ $(document).ready(function () {
     $(`.letters`).click(function (event) {
         const clickedLetter = event.target.textContent
         console.log(clickedLetter)
-        console.log(answerSplit.indexOf(clickedLetter))
-        if (answerSplit.indexOf(clickedLetter) === 0 ) {
+        //console.log(answerSplit.indexOf(clickedLetter))
+        if (answerSplit.indexOf(clickedLetter) <= 0 ) {
             $(event.target).css('color','gray')    
         }
-        else (answerSplit.indexOf(clickedLetter) === -1) {
-            $(event.target).css('color', 'red')
-        };
+        else if (answerSplit.indexOf(clickedLetter) === -1) {
+           $(event.target).css('color', 'red')
+       };
     })
     
 
