@@ -4,11 +4,12 @@
     display: flex;
     justify-content: center;
 }
-
 .letters {
     font-size: 48px;
     font-family: 'Raleway', sans-serif;
-    display: grid;
+    margin: 100px;
+    width: 350px;
+    display: grid; 
     grid-template-columns: 50px 50px 50px 50px 50px 50px;
     grid-template-rows: 50px 50px 50px 50px; 
     grid-column-gap: 10px;
@@ -19,6 +20,12 @@
 .answer {
     font-size: 48px;
     font-family: 'Raleway', sans-serif;
+}
+
+.gameboard { 
+    display: flex;
+    flex-flow: row-reverse;
+
 }
 
 .hidden {
