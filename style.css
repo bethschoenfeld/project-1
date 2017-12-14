@@ -4,17 +4,22 @@
     display: flex;
     justify-content: center;
 }
+
 .letters {
     font-size: 48px;
     font-family: 'Raleway', sans-serif;
-    margin: 100px;
+    
     width: 350px;
-    display: grid; 
+    /* display: grid; 
     grid-template-columns: 50px 50px 50px 50px 50px 50px;
     grid-template-rows: 50px 50px 50px 50px; 
     grid-column-gap: 10px;
-    grid-row-gap: 3px;
-    
+    grid-row-gap: 3px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .answer {
@@ -22,12 +27,11 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 .gameboard { 
     display: flex;
     flex-flow: row-reverse;
-
-}
-
-.hidden {
-    visibility: hidden;
 }
