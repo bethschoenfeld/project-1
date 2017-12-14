@@ -6,9 +6,11 @@ $(document).ready(function () {
     const answerSplit = words.split(``)
     console.log(answerSplit)
 
-    const answerFinal = answerSplit.map((letter) => {
-        return $('.answer-container').append(`<span class="answer">${letter}</span>`)
-    })
+    const answerFinal = answerSplit.map(function(letter) {
+    return $('.answer-container').append(`<span class="answer">${letter}</span>`)
+     })
+
+    //$(`.answer`).append(words)
 
     $(`.letters`).click(function (event) {
         const clickedLetter = event.target.textContent
@@ -16,10 +18,11 @@ $(document).ready(function () {
         if (answerSplit.indexOf(clickedLetter) >= 0) {
             $(event.target).css('color', 'gray')
             $(event.target).off()
+                //if the letter that was clicked is in answerSplit AND turned gray, then change the clicked letter black.
         }
         else {
             $(event.target).css('color', 'red')
             $(event.target).off()
-        };
+        }
     })
-});
+})
