@@ -7,7 +7,7 @@ $(document).ready(function () {
     console.log(answerSplit)
 
     const answerFinal = answerSplit.map(function(letter) {
-    return $(`.answer-container`).append(`<span class="answer hidden" ${letter}>${letter}</span>`)
+    return $(`.answer-container`).append(`<span class="answer hidden ${letter}">${letter}</span>`)
      })
 
     $(`.letters`).click(function (event) {
