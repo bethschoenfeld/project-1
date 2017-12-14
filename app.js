@@ -25,4 +25,5 @@ $(document).ready(function () {
             $(event.target).off()
         }
     })
+    $(answerFinal).css('color', 'black')
 })

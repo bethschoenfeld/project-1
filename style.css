@@ -21,6 +21,8 @@
     font-family: 'Raleway', sans-serif;
     color: white;
 
-    /* display: grid;
-    align-items: right; */
-} 
+}
+
+.hidden {
+    visibility: hidden;
+}
