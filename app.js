@@ -6,18 +6,20 @@ $(document).ready(function () {
     const answerSplit = words.split(``)
     console.log(answerSplit)
 
-    $(`.answer`).append(words)
+    const answerFinal = answerSplit.map((letter) => {
+        return $('.answer-container').append(`<span class="answer">${letter}</span>`)
+    })
 
     $(`.letters`).click(function (event) {
         const clickedLetter = event.target.textContent
         console.log(clickedLetter)
         if (answerSplit.indexOf(clickedLetter) >= 0) {
             $(event.target).css('color', 'gray')
-            $(event.target).off() 
+            $(event.target).off()
         }
         else {
             $(event.target).css('color', 'red')
-            $(event.target).off() 
+            $(event.target).off()
         };
     })
 });
