@@ -7,10 +7,8 @@ $(document).ready(function () {
     console.log(answerSplit)
 
     const answerFinal = answerSplit.map(function(letter) {
-    return $('.answer-container').append(`<span class="answer">${letter}</span>`)
+    return $(`.answer-container`).append(`<span class="answer hidden" ${letter}>${letter}</span>`)
      })
-
-    //$(`.answer`).append(words)
 
     $(`.letters`).click(function (event) {
         const clickedLetter = event.target.textContent
@@ -18,6 +16,7 @@ $(document).ready(function () {
         if (answerSplit.indexOf(clickedLetter) >= 0) {
             $(event.target).css('color', 'gray')
             $(event.target).off()
+            $(`.${clickedLetter}`).removeClass('hidden')
                 //if the letter that was clicked is in answerSplit AND turned gray, then change the clicked letter black.
         }
         else {
@@ -25,5 +24,4 @@ $(document).ready(function () {
             $(event.target).off()
         }
     })
-    $(answerFinal).css('color', 'black')
 })
